@@ -752,12 +752,14 @@ ul.inline li:last-child::after {
 
 #democss {
     position: relative;
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     width: 200px;
 }
 
 #stage{
-	-moz-perspective: 300px;
+	perspective: 300px;
+	-webkit-perspective: 300px;
 }
 
 @-moz-keyframes spin {
@@ -767,6 +769,17 @@ ul.inline li:last-child::after {
 
 	100% {
 		transform: rotateX(0deg) rotateY(360deg) rotateZ(360deg);
+	}
+
+}
+
+@-webkit-keyframes spin {
+	0% {
+		-webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotateX(0deg) rotateY(360deg) rotateZ(360deg);
 	}
 
 }

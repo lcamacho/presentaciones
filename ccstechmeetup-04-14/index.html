@@ -53,9 +53,10 @@
       <a href="https://twitter.com/leonardcamacho">@leonardcamacho</a> |
       <a href="mailto:lcamacho@mozillavenezuela.org">lcamacho@mozillavenezuela.org</a>
     </p>
-
-
   </header>
+  <aside class="talkdescription">
+    <p><button onclick="goFullScreen()">Pantalla completa</button></p>
+  </aside>
 
 
   <div id="slide" class="slide cover"><div>
@@ -223,12 +224,14 @@
         <h2>Aceleración de hardware CSS</h2>
       </header>
       <div id="democss">
-        <img src="pictures/html5.png" height="200" alt="HTML5 logo">
+        <img src="pictures/html5.png" height="170" alt="HTML5 logo">
       </div>
       <style contenteditable="">#democss {
         animation: 3s linear 0s normal none infinite spin;
         transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-      }</style>
+        -webkit-animation: 3s linear 0s normal none infinite spin;
+        -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}</style>
     <footer class="notes">
     </footer>
     </section>
@@ -260,6 +263,20 @@
            alt="WebRTC"
            class="middle shadow" height="400">
       <p class="demourl"><a href="https://talky.io">talky.io</a></p>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="ar" class="slide"><div>
+    <section>
+      <header>
+        <h2>WebGL + WebRTC = RA</h2>
+      </header>
+      <img src="pictures/ar.jpg"
+           alt="Realidad Aumentada"
+           class="middle shadow" height="400">
+      <p class="demourl"><a href="http://www.html5rocks.com/es/tutorials/webgl/jsartoolkit_webrtc/">Desarrollo de aplicaciones de realidad aumentada con JSARToolKit</a></p>
     <footer class="notes">
     </footer>
     </section>
