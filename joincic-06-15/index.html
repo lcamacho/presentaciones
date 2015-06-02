@@ -1,0 +1,421 @@
+<!DOCTYPE HTML>
+<!-- <html lang="en-US"> -->
+<html lang="es-ES" class="fade">
+<!--
+  ^ la clase "fade" hace que las diapositivas pasen suavemente de una a otra
+ -->
+<!-- <html lang="en-US" class="nonumbers"> -->
+<!--
+  Si no quieres números en las diapositivas agrega la clase "nonumbers" al elemento HTML.
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>WebApps para Firefox OS</title>
+<!--
+  Si subes la presentación a la web, asegurate de tener un buen título, este se mostrará en los resultados de las búsquedas y en las redes sociales
+ -->
+  <meta name="viewport" content="width=device-width, user-scalable=yes">
+  <link rel="stylesheet" href="themes/mozilla/styles/style.css">
+  <style type="text/css">
+    div[id$='bullets'].slide > div::after {
+      content: 'Solo para información, NO mostrar';
+      background: rgba(200,0,0,0.5);
+      color: #fff;
+      position: absolute;
+      top: 20px;
+      right: 0;
+      padding: 5px 20px;
+      transform: rotate(90deg) translate(52%,-150px);
+      border-radius: 5px;
+    }
+    .full div[id$='bullets'].slide > div::after {
+      animation: wiggle alternate 1s infinite;
+    }
+    @keyframes wiggle {
+      from {
+        transform: rotate(90deg) translate(52%,-150px);
+      }
+      to {
+        transform: rotate(90deg) translate(52%,-160px);
+      }
+    }
+    .slide.shout h2 {
+      font-size: 130px;
+    }
+  </style>
+</head>
+<body class="list">
+
+  <header class="caption">
+    <h1>WebApps para Firefox OS</h1>
+    <p class="footer">
+      Leonard Camacho - Mozilla Venezuela
+      <a href="https://twitter.com/leonardcamacho">@leonardcamacho</a> |
+      <a href="mailto:lcamacho@mozillavenezuela.org">lcamacho@mozillavenezuela.org</a>
+    </p>
+  </header>
+  <aside class="talkdescription">
+    <p><button onclick="goFullScreen()">Pantalla completa</button></p>
+  </aside>
+
+  <div id="init" class="slide cover"><div>
+    <section>
+      <header>
+        <h2>WebApps para Firefox OS</h2>
+      </header>
+      <img src="pictures/FFxOS.png"
+           class="Firefox OS" height="100">
+      <small class="byline">
+      </small>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+    <div id="mozilla" class="slide cover"><div>
+    <section>
+      <header>
+        <h2>Mozilla <3 Web</h2>
+      </header>
+    <img src="pictures/mozilla-love.jpg"
+           class="Firefox OS" height="100%">
+      <small class="byline">
+      </small>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+   <div id="firefoxos" class="slide"><div>
+    <section>
+      <header>
+        <h2>Firefox OS</h2>
+      </header>
+      <img src="pictures/firefox-os-logo.png"
+           alt="Firefox OS"
+           class="middle" height="400">
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="architecture" class="slide"><div>
+    <section>
+      <header>
+        <h2>Firefox OS: Arquitectura</h2>
+      </header>
+      <img src="pictures/firefoxos_architecture.png"
+           alt="Arquitectura"
+           class="middle" height="400">
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="fxapps" class="slide"><div>
+    <section>
+      <header>
+        <h2>Aplicaciones</h2>
+      </header>
+      <img src="pictures/apps.png" class="middle" height="400"
+           alt="Firefox OS apps">
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+   <div id="responsive" class="slide"><div>
+    <section>
+      <header>
+        <h2>Responsive design</h2>
+      </header>
+      <img src="pictures/panasonic-tv.jpg" class="middle" height="400"
+           alt="Firefox OS with Panasonic">
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="manifest" class="slide"><div>
+    <section>
+      <header>
+        <h2>Manifiesto</h2>
+      </header>
+      <pre>
+        <code>{</code>
+        <code>  "name": "Mi Aplicación",</code>
+        <code>  "description": "La descripción del uso",</code>
+        <code>  "launch_path": "/index.html",</code>
+        <code>  "icons": { "128": "/img/icon-128.png" },</code>
+        <code>  "version": "0.1",</code>
+        <code>  "developer": {</code>
+        <code>    "name": "Tu nombre u organización",</code>
+        <code>    "url": "http://your-homepage-here.org"</code>
+        <code>  }</code>
+        <code>}</code>
+      </pre>
+      <p class="demourl"><a href="https://developer.mozilla.org/docs/Apps/Manifest">Manifiesto de la App</a></p>
+    <footer class="notes">
+    </footer>
+  </div></div>
+
+  <div id="threekinds" class="slide"><div>
+    <section>
+      <header>
+        <h2>Tipos de aplicaciones</h2>
+      </header>
+      <ul>
+        <li>Aplicaciones alojadas - localizadas en el servidor, fácil de actualizar, acceso limitado.</li>
+        <li>Aplicaciones empaquetadas - instaladas localmente en el dispositivo.
+          <ul>
+            <li>Privilegiadas - revisadas en el marketplace</li>
+            <li>Certificadas - parte del SO, solo de Mozilla y asociados</li>
+          </ul>
+        </li>
+      </ul>
+      <p class="demourl"></p>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="zomgapis" class="slide shout"><div>
+    <section>
+      <header>
+        <h2>WebAPIs</h2>
+      </header>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+   <div id="webapilist" class="slide"><div>
+    <section>
+      <header>
+        <h2>Web APIs (aplicaciones alojadas)</h2>
+      </header>
+      <ul>
+        <li>
+          Sensor de luz de ambiente
+        </li>
+        <li>
+          Estado de la bateria
+        </li>
+        <li>
+          Geolocalizacion
+        </li>
+        <li>
+          Proximidad
+        </li>
+        <li>
+          Orientacion de dispositivo
+        </li>
+        <li>
+          Vibracion
+        </li>
+        <li>
+          Notificaciones
+        </li>
+      </ul>
+      <p class="demourl">
+        <a href="https://wiki.mozilla.org/WebAPI">Wiki de las WebAPI</a>
+      </p>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+   <div id="webapilistprivileged" class="slide"><div>
+    <section>
+      <header>
+        <h2>Web APIs (aplicaciones privilegiadas)</h2>
+      </header>
+      <ul>
+        <li>Navegador</li>
+        <li>TCP Socket</li>
+        <li>Contactos</li>
+        <li>systemXHR</li>
+      </ul>
+      <p class="demourl">
+        <a href="https://wiki.mozilla.org/WebAPI">Wiki de las WebAPI</a>
+      </p>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+   <div id="webapilistcertified" class="slide"><div>
+    <section>
+      <header>
+        <h2>Web APIs (aplicaciones certificadas)</h2>
+      </header>
+        <ul>
+          <li>
+            WebSMS
+          </li>
+          <li>
+            Telefonia
+          </li>
+          <li>
+            Configuracion
+          </li>
+          <li>
+            Reloj
+          </li>
+          <li>
+            Wifi
+          </li>
+        </ul>
+     <p class="demourl">
+        <a href="https://wiki.mozilla.org/WebAPI">Wiki de las WebAPI</a>
+      </p>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="webactivities" class="slide"><div>
+    <section>
+      <header>
+        <h2>Web Activities</h2>
+      </header>
+      <img src="pictures/webactivities.png" class="middle" height="400"
+           alt="Firefox OS apps">
+      <p class="demourl"><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Activities">https://developer.mozilla.org/en-US/docs/Web/API/Web_Activities</a></p>
+    </section>
+  </div></div>
+
+  <div id="tools" class="slide shout"><div>
+    <section>
+      <header>
+        <h2>Herramientas</h2>
+      </header>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="firefox-dev" class="slide cover"><div>
+    <section>
+      <header>
+        <h2>Firefox Developer Edition</h2>
+      </header>
+      <img src="pictures/fx-dev-wallpaper.jpg"
+           alt="Firefox Developer"
+           class="middle" height="400">
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="webide" class="slide"><div>
+    <section>
+      <header>
+        <h2>Firefox DE: WebIDE</h2>
+      </header>
+      <img src="pictures/webide.png"
+           alt="Web IDE"
+           class="middle" height="400">
+      <p class="demourl"><a href="https://developer.mozilla.org/en-US/docs/Tools/WebIDE">MDN: Documentacion de WebIDE</a></p>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="blocks" class="slide"><div>
+    <section>
+      <header>
+        <h2>Building Blocks</h2>
+      </header>
+      <img src="pictures/blocks.png"
+           alt="Building Blocks"
+           class="middle" height="400">
+      <p class="demourl"><a href="http://buildingfirefoxos.com/">http://buildingfirefoxos.com/</a></p>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="node" class="slide"><div>
+    <section>
+      <header>
+        <h2>node-firefox</h2>
+      </header>
+      <img src="pictures/node-firefox.png"
+           alt="node-firefox"
+           class="middle" height="400">
+      <p class="demourl"><a href="https://hacks.mozilla.org/2015/02/introducing-node-firefox/">node-firefox</a></p>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="boilerplate" class="slide"><div>
+    <section>
+      <header>
+        <h2>FirefoxOS Boilerplate App</h2>
+      </header>
+      <img src="pictures/nyman.png"
+           alt="Boilerplate"
+           class="middle" height="400">
+      <p class="demourl"><a href="https://github.com/robnyman/Firefox-OS-Boilerplate-App/">https://github.com/robnyman/Firefox-OS-Boilerplate-App</a></p>
+    </section>
+  </div></div>
+
+  <div id="demo" class="slide shout"><div>
+    <section>
+      <header>
+        <h2>DEMO</h2>
+      </header>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+
+  <div id="market" class="slide"><div>
+    <section>
+      <header>
+        <h2>Firefox Marketplace</h2>
+      </header>
+      <img src="pictures/market.png"
+           alt="Boilerplate"
+           class="middle" height="400">
+      <p class="demourl"><a href="https://marketplace.firefox.com/">https://marketplace.firefox.com</a></p>
+    </section>
+  </div></div>
+
+
+<!-- ===================================================================
+AND… I'M SPENT
+======================================================================== -->
+
+  <div id="thanks" class="slide"><div>
+    <section>
+      <header>
+        <h2>Gracias</h2>
+      </header>
+      <img src="pictures/ironman_court.gif" class="right shadow" alt="Bye by Ironman">
+      <ul class="nobull">
+        <li>Leonard Camacho - @leonardcamacho </li>
+          <li>leonardcamacho.me</li>
+          <li>mozillavenezuela.org</li>
+          <li>twitter.com/mozillave</li>
+          <li>facebook.com/MozillaVenezuela</li>
+          <li>Slides: http://bit.ly/devcampvzla-11-14</li>
+      </ul>
+
+    <footer class="notes">
+    </footer>
+
+    </section>
+  </div></div>
+
+  <!--
+    Para esconder la barra de progreso de la presentación, borra el elemento con la clase progress.
+    -->
+  <div class="progress"><div></div></div>
+  <script src="scripts/script.js"></script>
+  <!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+</body>
+</html>
