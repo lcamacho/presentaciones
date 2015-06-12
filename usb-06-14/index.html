@@ -1,0 +1,575 @@
+<!DOCTYPE HTML>
+<!-- <html lang="en-US"> -->
+<html lang="es-ES" class="fade">
+<!--
+  ^ la clase "fade" hace que las diapositivas pasen suavemente de una a otra
+ -->
+<!-- <html lang="en-US" class="nonumbers"> -->
+<!--
+  Si no quieres números en las diapositivas agrega la clase "nonumbers" al elemento HTML.
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>WebDeveloper Mashup</title>
+<!--
+  Si subes la presentación a la web, asegurate de tener un buen título, este se mostrará en los resultados de las búsquedas y en las redes sociales
+ -->
+  <meta name="viewport" content="width=device-width, user-scalable=yes">
+  <link rel="stylesheet" href="themes/mozilla/styles/style.css">
+  <style type="text/css">
+    div[id$='bullets'].slide > div::after {
+      content: 'Solo para información, NO mostrar';
+      background: rgba(200,0,0,0.5);
+      color: #fff;
+      position: absolute;
+      top: 20px;
+      right: 0;
+      padding: 5px 20px;
+      transform: rotate(90deg) translate(52%,-150px);
+      border-radius: 5px;
+    }
+    .full div[id$='bullets'].slide > div::after {
+      animation: wiggle alternate 1s infinite;
+    }
+    @keyframes wiggle {
+      from {
+        transform: rotate(90deg) translate(52%,-150px);
+      }
+      to {
+        transform: rotate(90deg) translate(52%,-160px);
+      }
+    }
+    .slide.shout h2 {
+      font-size: 130px;
+    }
+  </style>
+</head>
+<body class="list">
+
+  <header class="caption">
+    <h1>WebDeveloper Mashup</h1>
+    <p class="footer">
+      Leonard Camacho - Mozilla Venezuela
+      <a href="https://twitter.com/leonardcamacho">@leonardcamacho</a> |
+      <a href="mailto:lcamacho@mozillavenezuela.org">lcamacho@mozillavenezuela.org</a>
+    </p>
+  </header>
+  <aside class="talkdescription">
+    <p><button onclick="goFullScreen()">Pantalla completa</button></p>
+  </aside>
+
+  <div id="init" class="slide cover"><div>
+    <section>
+      <header>
+        <h2>WebDeveloper Mashup</h2>
+      </header>
+      <img src="pictures/smash.jpg"
+           class="Mash Bros" height="100">
+      <small class="byline">
+      </small>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="html5" class="slide"><div>
+    <section>
+      <header>
+        <h2>HTML5 ya es un estandar</h2>
+      </header>
+      <img src="pictures/html5.png"
+           alt="HTML5"
+           class="middle" height="400">
+      <p class="demourl">
+        <a href="http://www.w3.org/TR/html5/">W3C HTML5</a>
+      </p>
+    </section>
+  </div></div>
+
+  <div id="slide" class="slide cover"><div>
+    <section>
+      <header>
+        <h2>HTML5 entre mitos y leyendas</h2>
+      </header>
+      <img src="pictures/excalibur1.jpg"
+           class="Firefox OS" height="100">
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+<!-- end slide block -->
+
+   <div id="smartphones" class="slide"><div>
+    <section>
+      <header>
+        <h2>Tiempo atras</h2>
+      </header>
+      <img src="pictures/nosdk.png"
+           alt="No se necesita SDK"
+           class="middle" height="400">
+      <p class="demourl">
+        <a href="https://www.youtube.com/watch?v=8Vq993Td6ys">Youtube</a>
+      </p>
+    <footer class="notes">
+      Steve Jobs anuncia que no se necesita de un SDK para el iPhone ya que posee Safari y con este pueden construir aplicaciones.
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="wrappers" class="slide"><div>
+    <section>
+      <header>
+        <h2>Phonegap y compañia</h2>
+      </header>
+      <img src="pictures/phonegap_flow.png"
+           alt="Phonegap"
+           class="middle" height="183">
+    <footer class="notes">
+      Aparece Phonegap y compañia para llenar ese agujero en el cual html no podia correr como una aplicacion instalada en el telefono por lo que no podia tener acceso a una gran cantidad de características.
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="ditch" class="slide"><div>
+    <section>
+      <header>
+        <h2>Abandonan HTML5</h2>
+      </header>
+      <img src="pictures/ditchhtml.png"
+           alt="Facebook y Linkedin dejaron html"
+           class="middle" height="450">
+    <footer class="notes">
+      Noticias relacionadas con que tanto Linkedin como Facebook han dejado de lado html en sus aplicaciones moviles para dedicarse a desarrollarlas con lenguajes nativos. Lo que ellos esgrimen para abandonar html es que es muy lento en comparación con lo nativo.
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="fastbook" class="slide"><div>
+    <section>
+      <header>
+        <h2>Respuesta a Facebook: Fastbook</h2>
+      </header>
+       <video class="middle" height="400" controls>
+        <source src="pictures/fastbook.mp4"  type="video/mp4"></source>
+        <source src="pictures/fastbook.webm"  type="video/webm"></source>
+      </video>
+      <p class="demourl">
+        <a href="http://www.sencha.com/blog/the-making-of-fastbook-an-html5-love-story/">The Making of Fastbook: An HTML5 Love Story</a>
+      </p>
+    <footer class="notes">
+      La gente de Sencha creo Fastbook para probar que los problemas que alegaba Facebook en cuanto a la tecnlogia web no eran ciertos.
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="myths" class="slide"><div>
+    <section>
+      <header>
+        <h2>Mitos</h2>
+      </header>
+      <img class="right" alt="Mythbusters" src="pictures/mythbusters.jpg"></img>
+      <ul class="inner">
+        <li class="active">Javascript es lento</li>
+        <li>La respuesta al touch es lenta</li>
+        <li>Problemas de memoria</li>
+        <li>Problemas con la fragmentación de pantalla</li>
+      </ul>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+
+  <div id="mediaquery" class="slide"><div>
+    <section>
+      <header>
+        <h2>Fragmentación de pantalla</h2>
+      </header>
+      <img src="pictures/screens.jpg"
+           alt=""
+           class="middle" height="400">
+      <p class="demourl"><a href="http://mediaqueri.es">mediaqueri.es</a></p>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="myths2" class="slide"><div>
+    <section>
+      <header>
+        <h2>Mitos</h2>
+      </header>
+      <img class="right" alt="Mythbusters" src="pictures/mythbusters.jpg"></img>
+      <ul class="inner">
+        <li class="active">Javascript es lento</li>
+        <li class="active">La respuesta al touch es lenta</li>
+        <li class="active">Problemas de memoria</li>
+        <li class="active">Problemas con la fragmentación de pantalla</li>
+        <li>Problemas en dispositivos gama baja</li>
+      </ul>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="fxos" class="slide"><div>
+    <section>
+      <header>
+        <h2>Gama baja</h2>
+      </header>
+      <img src="pictures/firefoxos.png"
+           alt="Firefox OS"
+           class="middle" height="450">
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="myths3" class="slide"><div>
+    <section>
+      <header>
+        <h2>Mitos</h2>
+      </header>
+      <img class="right" alt="Mythbusters" src="pictures/mythbusters.jpg"></img>
+      <ul class="inner">
+        <li class="active">Javascript es lento</li>
+        <li class="active">La respuesta al touch es lenta</li>
+        <li class="active">Problemas de memoria</li>
+        <li class="active">Problemas con la fragmentación de pantalla</li>
+        <li class="active">Problemas en dispositivos gama baja</li>
+        <li>No hay aceleración por hardware</li>
+        <li>Javascript no es multithread</li>
+      </ul>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="css3d" class="slide"><div>
+    <section id='stage'>
+      <header>
+        <h2>Aceleracion por hardware CSS</h2>
+      </header>
+      <div id="democss">
+        <img src="pictures/html5.png" height="170" alt="HTML5 logo">
+      </div>
+      <style contenteditable="">#democss {
+      -webkit-animation: 3s linear 0s normal none infinite spin;
+      -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+      animation: 3s linear 0s normal none infinite spin;
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}</style>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="webgl" class="slide"><div>
+    <section>
+      <header>
+        <h2>WebGL y Web Workers</h2>
+      </header>
+      <img src="pictures/webgl1.png"
+           alt="Noticias WebGL"
+           class="left" height="370">
+      <img src="pictures/webgl2.png"
+           alt="Noticias WebGL"
+           class="right shadow" height="370">
+      <p class="demourl"><a href="https://blog.mozilla.org/blog/2014/03/12/mozilla-and-epic-preview-unreal-engine-4-running-in-firefox/">Mozilla and Epic Preview Unreal Engine 4 Running in Firefox</a></p>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="webrtc" class="slide"><div>
+    <section>
+      <header>
+        <h2>WebRTC</h2>
+      </header>
+      <img src="pictures/webrtc.png"
+           alt="WebRTC"
+           class="middle shadow" height="400">
+      <p class="demourl"><a href="https://talky.io">talky.io</a></p>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="ar" class="slide"><div>
+    <section>
+      <header>
+        <h2>WebGL + WebRTC = RA</h2>
+      </header>
+      <img src="pictures/ar.jpg"
+           alt="Realidad Aumentada"
+           class="middle shadow" height="400">
+      <p class="demourl"><a href="http://www.html5rocks.com/es/tutorials/webgl/jsartoolkit_webrtc/">Desarrollo de aplicaciones de realidad aumentada con JSARToolKit</a></p>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="simd" class="slide"><div>
+    <section>
+      <header>
+        <h2>SIMD</h2>
+      </header>
+      <img src="pictures/simd.png"
+           alt="SIMD"
+           class="middle shadow" height="400">
+      <p class="demourl"><a href="https://hacks.mozilla.org/2014/10/introducing-simd-js/">Introducing SIMD.js</a></p>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="webvr" class="slide"><div>
+    <section>
+      <header>
+        <h2>WebVR</h2>
+      </header>
+      <img src="pictures/webvr.png"
+           alt="WebVR"
+           class="middle shadow" height="400">
+      <p class="demourl"><a href="http://mozvr.com/">MozVR</a></p>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="thebad" class="slide oneline"><div>
+    <section>
+      <header>
+        <h2>Sin Embargo</h2>
+      </header>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="kings" class="slide"><div>
+    <section>
+      <header>
+        <h2>IE6 Ha muerto, larga vida a los nuevos IE6</h2>
+      </header>
+      <img src="pictures/android-browser.png"
+           alt="Navegador Android"
+           height="350"
+           class="left">
+      <img src="pictures/safari-ios.png"
+           alt="Safari iOS"
+           height="350"
+           class="right">
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="good-ios" class="slide"><div>
+    <section>
+      <header>
+        <h2>Pero hay buenas noticias</h2>
+      </header>
+      <img src="pictures/soporte-safari8.png"
+           alt="Soporte Safari8"
+           class="middle shadow" height="400">
+      <p class="demourl"><a href="http://www.sencha.com/blog/apple-shows-love-for-html5-with-ios-8">Apple Shows Love for HTML5 with iOS 8</a></p>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="good-android" class="slide"><div>
+    <section>
+      <header>
+        <h2>Pero hay buenas noticias</h2>
+      </header>
+      <img src="pictures/android-chromium.png"
+           alt="Android Chromium"
+           class="middle" height="400">
+      <p class="demourl"><a href="http://developer.telerik.com/featured/android-5-0s-auto-updating-webview-means-mobile-apps/">What Android 5.0’s Auto-Updating WebView Means for Mobile Apps</a></p>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="webcompat" class="slide"><div>
+    <section>
+      <header>
+        <h2>WebCompat</h2>
+      </header>
+      <img src="pictures/webcompat.png"
+           alt="WebCompat"
+           class="middle" height="400">
+      <p class="demourl"><a href="https://webcompat.com/">WebCompat</a></p>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="white" class="slide"><div>
+    <section>
+      <header>
+        <h2>La pagina en blanco</h2>
+      </header>
+      <img src="pictures/white_page.png"
+           alt="Pagina en blanco"
+           height="450"
+           class="middle shadow">
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="fail" class="slide"><div>
+    <section>
+      <header>
+        <h2>La pagina en blanco de Movistar</h2>
+      </header>
+      <img src="pictures/movistar_fail1.png"
+           alt="Pagina en blanco de Movistar Venezuela"
+           height="400"
+           class="middle shadow">
+      <p class="demourl"><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=828439">Paso mas de un año para que arreglaran este bug</a></p>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="learn" class="slide"><div>
+    <section>
+      <header>
+        <h2>Lecciones</h2>
+      </header>
+      <ul class="inner">
+        <li class="active">No detecten el user agent para saber si es un dispositivo movil</li>
+        <li>Si es necesario que detecten el user agent la recomendacion es detectar el token: mobi</li>
+        <li>Revisen sus paginas en la mayoria de navegadores evergreen para dispositivos moviles</li>
+      </ul>
+      <p class="demourl"><a href="https://developer.mozilla.org/en-US/docs/Browser_detection_using_the_user_agent#Mobile.2C_Tablet_or_Desktop">MDN: Recomendacion para detectar navegadores moviles</a></p>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="firefox-dev" class="slide cover"><div>
+    <section>
+      <header>
+        <h2>Firefox Developer Edition</h2>
+      </header>
+      <img src="pictures/fx-dev-wallpaper.jpg"
+           alt="Firefox Developer"
+           class="middle" height="400">
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="webide" class="slide"><div>
+    <section>
+      <header>
+        <h2>WebIDE</h2>
+      </header>
+      <img src="pictures/webide.png"
+           alt="WebIDE"
+           class="middle" height="400">
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="valence1" class="slide"><div>
+    <section>
+      <header>
+        <h2>Valence</h2>
+      </header>
+      <img src="pictures/one-ring.jpg"
+           alt="Valence"
+           class="right" height="200">
+      <blockquote>
+        <p>One devtool to find them, One devtool to rule them all<p>
+        <p class="quotesource">The Lord Of DevTools</p>
+      </blockquote>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="valence2" class="slide"><div>
+    <section>
+      <header>
+        <h2>Valence</h2>
+      </header>
+      <video class="middle" height="400" controls>
+        <source src="pictures/Valence.mp4"  type="video/mp4"></source>
+        <source src="pictures/Valence.webm"  type="video/webm"></source>
+      </video>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="performance" class="slide"><div>
+    <section>
+      <header>
+        <h2>Performance tools</h2>
+      </header>
+      <img src="pictures/perf-tools.png"
+           alt="Performance tools"
+           class="middle" height="400">
+      <p class="demourl"><a href="https://hacks.mozilla.org/2015/06/power-surge-optimize-the-javascript-in-this-html5-game-using-firefox-developer-edition/">Power Surge: aprende a usar las herramientas jugando</a></p>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="tools" class="slide"><div>
+    <section>
+      <header>
+        <h2>Devtools User Voice</h2>
+      </header>
+      <img src="pictures/uservoice.png"
+           alt="Valence"
+           class="middle shadow" height="400">
+      <p class="demourl"><a href="https://ffdevtools.uservoice.com">Firefox Developer Tools ideas</a></p>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+
+
+<!-- ===================================================================
+AND… I'M SPENT
+======================================================================== -->
+
+  <div id="thanks" class="slide"><div>
+    <section>
+      <header>
+        <h2>Gracias</h2>
+      </header>
+      <img src="pictures/ironman_court.gif" class="right shadow" alt="Bye by ironman">
+      <ul class="nobull">
+        <li>Leonard Camacho - @leonardcamacho </li>
+          <li>leonardcamacho.me</li>
+          <li>mozillavenezuela.org</li>
+          <li>twitter.com/mozillave</li>
+          <li>facebook.com/MozillaVenezuela</li>
+          <li>Slides: http://bit.ly/USBComputacion</li>
+      </ul>
+
+    <footer class="notes">
+    </footer>
+
+    </section>
+  </div></div>
+
+  <!--
+    Para esconder la barra de progreso de la presentación, borra el elemento con la clase progress.
+    -->
+  <div class="progress"><div></div></div>
+  <script src="scripts/script.js"></script>
+  <!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+</body>
+</html>
